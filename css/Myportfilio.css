@@ -670,7 +670,7 @@ body {
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background:  rgb(221, 161, 161);
+    background:  rgb(204, 148, 148);
     font-weight: 500;
     margin-top: 70px;
 }
@@ -681,7 +681,7 @@ body {
 }
 .top i{
     color:  rgb(221, 161, 161);
-    background:  rgb(221, 161, 161);
+    background:  rgb(202, 147, 147);
     font-size: 20px;
     padding: 10px;
     border-radius: 0.5rem;
