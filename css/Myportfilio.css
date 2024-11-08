@@ -12,6 +12,7 @@ body {
 
 .header {
     position: fixed;
+    max-width: auto ;
     top: 0;
     left: 0;
     width: 100%;
@@ -36,7 +37,7 @@ body {
 }
 
 .navbar a {
-    display: inline-block;
+    display:inline-block;
     font-size: 25px;
     color: white;
     text-decoration: none;
@@ -46,11 +47,23 @@ body {
     opacity: 0;
     animation: slideTop 0.5s ease forwards;
     animation-delay: calc(0.1s * var(--i));
+    stroke-width: 6px;
+    fill: transparent;
+    stroke: rgb(217, 185, 185) ;
+    stroke-dasharray: 85 400;
+    stroke-dashoffset: -220;
+    transition: 1s all ease;
 }
 
 .navbar a:hover {
     color: rgb(217, 185, 185);
 }
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 
 .home {
     position: relative;
@@ -232,7 +245,8 @@ body {
 .service-list div h2 {
     font-size: 30px;
     font-weight: 500;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .service-list div a {
@@ -246,7 +260,7 @@ body {
     display: inline-block;
     overflow-wrap: break-word;
     width: 100%;
-    max-width: 30ch; 
+    max-width: 35ch; 
     margin-bottom: 20px;
 }
 .read {
@@ -666,26 +680,31 @@ body {
                 1px 1px 40px rgb(221, 161, 161);
 }
 
-.last-text p{
+.last-text p {
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background:  rgb(204, 148, 148);
+    background:  rgb(221, 161, 161);
     font-weight: 500;
     margin-top: 70px;
 }
-.top{
+
+.top {
     position: fixed;
     bottom: 2rem;
     right: 2.1rem;
+    cursor: pointer;
+    text-decoration: none; /* Removes underline */
 }
-.top i{
-    color:  rgb(221, 161, 161);
-    background:  rgb(202, 147, 147);
+
+.top i {
+    color: rgb(221, 161, 161);
+    background: rgb(24, 23, 23);
     font-size: 20px;
     padding: 10px;
     border-radius: 0.5rem;
 }
+
 
 @keyframes slideLeft {
     from {
@@ -810,5 +829,19 @@ body {
     100% {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+@media screen and (max-width: 568px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar.active {
+        display: flex;
+    }   
+
+    .hamburger {
+        display: block;
     }
 }

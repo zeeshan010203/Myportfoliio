@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./css/Myportfilio.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -13,16 +15,16 @@
   </head>
   <body>
     <header class="header">
-      <a  href="#" class="logo">Portfolio</a>
-
+      <a href="#" class="logo">Portfolio</a>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
       <nav class="navbar">
-        <a  href="#" style="--i: 1" class="active">Home</a>
-        <a  href="#about" style="--i: 2">About</a>
-        <a  href="#services" style="--i: 3">Skill</a>
-        <a  href="#portfolio" style="--i: 4">Portfolio</a>
-        <a  href="#contact" style="--i: 5">Contact</a>
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Skill</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
       </nav>
-    </header>
+  </header>
     <section class="home">
       <div class="home-content">
         <h3>Hello, It's Me</h3>
@@ -74,28 +76,32 @@
             <i class="bx bx-hotel" style="color: #d9b9b9"></i>
             <h2>Shin-Yokohama Kokusai Hotel</h2>
             <p>
-              Description of your responsibilities or experiences in this
-              position. You can add specific details, tasks, or achievements
-              related to this role.
+              At Shin-Yokohama Kokusai Hotel, I worked as a waiter for one year, 
+              assisting with banquets and bridal fairs while contributing to the high-quality hospitality services
+               provided to both business and leisure guests, including accommodations, dining, and event hosting
             </p>
             <a target="_blank" href="https://kokusai-hotels.com/shinyokohamakokusai/" class="read">Learn More</a>
           </div>
           <div class="service-item">
             <i class="bx bxs-shopping-bag" style="color: #d9b9b9"></i>
-            <h2>Retail Associate Experience</h2>
+            <h2>ABC-Mart  </h2>
             <p>
-              Overview of the responsibilities held at this job, including any
-              relevant skills or experiences gained that may apply to future
-              roles.
+
+              At ABC-Mart, I worked as a retail associate, helping customers find the right products,
+               keeping store displays fresh and appealing, and ensuring a smooth shopping experience.
+                I also collaborated closely with my team to meet sales targets, 
+                providing a positive and welcoming environment for every customer.
             </p>
             <a  target="_blank" href="https://www.abc-mart.net/shop/?utm_source=google&utm_medium=cpc&utm_content=2713317821_41496695_1543002605_607103509323_kwd-338545869332&utm_campaign=01NQ_SCH_%28%E7%A4%BE%E5%90%8D%29&utm_term=e_abcmart&utm_id=gaw_607103509323&gad_source=1&gclid=EAIaIQobChMIvuTy2cnKiQMV5tMWBR2TBwtTEAAYASAAEgL9cfD_BwE" class="read">Learn More</a>
           </div>
           <div class="service-item">
             <i class="bx bxs-wrench" style="color: #d9b9b9"></i>
-            <h2>Technical Assistance Work</h2>
+            <h2>Craftsman</h2>
             <p>
-              Details of technical skills or hands-on experience, such as
-              troubleshooting, maintenance, or assisting in repairs.
+              I worked full-time for 3 years as a Tobi-shoku (scaffolder),
+              assisting in the construction, setup, and dismantling of scaffolding for various building projects,
+              ensuring safety and structural support throughout the process. My role also involved collaborating with construction teams to meet project
+              deadlines efficiently.
             </p>
             <a target="_blank" href="https://youtu.be/9k1jvm385Ts?si=BaGFwEToXvJf9n3F" class="read">Learn More</a>
           </div>
@@ -202,50 +208,57 @@
         </div>
     </div>
     </section>
-    <section>
-      <div id="portfolio" id="portfolio">
-        <div class="main-text" id="project">
-          <h2>My<span>Project</span></h2>
-          <div class="portfolio-content">
-            <div class="row">
-              <img src=".//image/shoes.png">
-              <div class="layer">
-                <h5>Ali-Sneaker</h5>
-                <p>fogfjerogjvoidvrtubvrtiuvhpoeri<br>cenjrpi9thugijefrpokrt9hygijkfpoe@ty<br>ri@opfkvshjgp:rseigpodrjghpgrtiojs@htohtr
-                </p>
-                <a target="_blank" href="https://gict.xsrv.jp/zee_shan_bhatti/wpk/"><i class='bx bx-link-external' style="color: rgb(8, 8, 8);"></i></a>
+      <section>
+        <div id="portfolio" id="portfolio">
+          <div class="main-text" id="project">
+            <h2>My<span>Project</span></h2>
+            <div class="portfolio-content">
+              <div class="row">
+                <img src=".//image/shoes.png">
+                <div class="layer">
+                  <h5>Ali-Sneaker</h5>
+                  <p>Ali-Sneaker is an online store offering a range of sneakers from brands like Adidas, Nike, and Jordan, 
+                    including new releases and limited editions. It provides various sizes, colors, and discounts,
+                    along with customer accounts and shipping details for a convenient shopping experience.
+                  </p>
+                  <a target="_blank" href="https://gict.xsrv.jp/zee_shan_bhatti/wpk/"><i class='bx bx-link-external' style="color: rgb(8, 8, 8);"></i></a>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <img src=".//image/music.png">
-              <div class="layer">
-                <h5>ZeeTube</h5>
-                <p>fogfjerogjvoidvrtubvrtiuvhpoeric<br>enjrpi9thugijefrpokrt9hygijkfpoe@tyri@opf<br>kvshjgp:rseigpodrjghpgrtiojs@htohtr
-                </p>
-                <a target="_blank" href="https://zeetube.vercel.app/"><i class='bx bx-link-external' style="color: rgb(10, 9, 9);"></i></a>
+              <div class="row">
+                <img src=".//image/music.png">
+                <div class="layer">
+                  <h5>ZeeTube</h5>
+                  <p>
+                    ZeeTube is a video streaming platform where users can upload, watch, and engage with videos. It offers features like subscribing to channels, viewing music videos, and exploring content by categories. The platform focuses on a personalized experience for users to interact with a variety of content.
+                  </p>
+                  <a target="_blank" href="https://zeetube.vercel.app/"><i class='bx bx-link-external' style="color: rgb(10, 9, 9);"></i></a>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <img src=".//image/zeeta.png">
-              <div class="layer">
-                <h5>ZeeTaa</h5>
-                <p>fogfjerogjvoidvrtubvrtiuv<br>poericenjrpi9thugijefrpokrt9hygij<br>kfpoe@tyri@opfkvshjgp:rseigpodrjghpgrtiojs@htohtr
-                </p>
-                <a target="_blank" href="https://zeetaa.vercel.app/en"><i class='bx bx-link-external' style="color: rgb(8, 8, 8);"></i></a>
+              <div class="row">
+                <img src=".//image/zeeta.png">
+                <div class="layer">
+                  <h5>ZeeTaa</h5>
+                  <p>Zeetaa is a platform that connects people looking to socialize and make new friends. It offers a community where users can sign in, join, and interact with others. The site is available in both English and Japanese, allowing users to explore social opportunities and create memorable experiences.
+                  </p>
+                  <a target="_blank" href="https://zeetaa.vercel.app/en"><i class='bx bx-link-external' style="color: rgb(8, 8, 8);"></i></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     <section class="contact" id="contact">
       <div class="contact-text">
           <h2>Contact <span>Me</span></h2>
           <h4>I want to work with you</h4>
           <p>
-              I'm excited to collaborate on new projects and create something amazing together. 
-              Please feel free to reach out via email or phone, or connect with me on social media!
-          </p>
+            I’m really excited about the possibility of working with you.
+             I’m passionate about learning and am eager to develop my skills to be a valuable asset to your company. 
+             I’m willing to put in the effort and learn everything needed to contribute to your team’s success. 
+             My goal is to help the company grow and reach new heights, and I’ll give my best to make that happen.
+              Please feel free to contact me through email, phone, or social media—I look forward to connecting!
+
+
           <ul class="contact-list">
               <li><i class='bx bxs-send' style='color:#d9b9b9'></i> Zeeshanbhatti648@yahoo.com</li>
               <li><i class='bx bxs-phone' style='color:#d9b9b9'></i> 080-4607-1308</li>
@@ -267,11 +280,17 @@
           </form>
       </div>
   </section>
+<div id="top"></div>
+
+<!-- Main Content -->
+<footer>
   <div class="last-text">
-    <p>defrsgdgfsdfghdfgdhfgfdsf</p>
+    <p>Copyright © 2024 My Portfolio All Rights Reserved.</p>
   </div>
-  <a href="class-top"><i class='bx bx-up-arrow-alt'></i></a>
-  
+
+  <!-- Back-to-Top Button -->
+  <a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
+</footer>
     <script src="main.js"></script>
   </body>
 </html>
