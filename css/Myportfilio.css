@@ -17,7 +17,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background:transparent;
+    background:rgb(33, 32, 32);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,10 +58,54 @@ body {
 .navbar a:hover {
     color: rgb(217, 185, 185);
 }
-.hamburger {
-    display: none;
-    font-size: 30px;
+.square {
+    border: 1px solid rgb(217, 185, 185);
+    height: 26px;
+    width: 26px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10%;
+    transform: rotate(45deg);
+    overflow: hidden;
     cursor: pointer;
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+}
+
+.square .burgerwrap {
+    height: 18px;
+    width: 21px;
+    transform: rotate(-45deg);
+    padding-left: 5px;
+    padding-top: 8px;
+}
+
+.square:hover {
+    transform: rotate(135deg);
+    border: 1px solid #fff;
+}
+
+.square span {
+    height: 2px;
+    width: 14px;
+    background: rgb(217, 185, 185);
+    display: block;
+    margin-bottom: 2px;
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+}
+
+.square:hover span {
+    margin-left: 26px;
+}
+.close-btn {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it appears above the menu items */
 }
 
 
@@ -831,7 +875,7 @@ body {
         opacity: 1;
     }
 }
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 768px) {
     .navbar {
         display: none;
         flex-direction: column;
@@ -843,5 +887,123 @@ body {
 
     .hamburger {
         display: block;
+    }
+}@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .navbar a {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    
+    .home-content h1 {
+        font-size: 32px;
+    }
+    
+    .about {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-list {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    .contact {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 10%;
+        background: black   ;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .header.active {
+        display: none; /* Hide the entire header when navbar is active */
+    }
+
+    .navbar.active {
+        display: flex;
+        width: 100%;
+        position: fixed; /* Make the active navbar fixed to the top */
+        top: 0;
+        left: 0;
+        background: rgba(33, 32, 32, 0.9); /* Slightly transparent background */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 999; /* Ensure it's on top */
+    }
+
+    .navbar.active a {
+        font-size: 24px;
+        padding: 15px 0;
+    }
+
+    
+    .about-img img {
+        width: 80%;
+    }
+    
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .navbar {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+@media screen and (min-width: 765px) {
+    .square {
+        display: none; /* Hide hamburger icon */
+    }
+
+    .navbar {
+        display: flex; /* Ensure navbar is always displayed on larger screens */
+        position: relative; /* Reset position to fit within header */
+        width: auto; /* Default width for desktop view */
+        flex-direction: row; /* Horizontal layout */
+        background: none; /* Remove background for desktop view */
+        padding: 0;
+    }
+   
+}
+@media screen and (max-width: 768px) {
+    .navbar.active .close-btn {
+        display: block; /* Show close button when navbar is active */
+    }
+
+    .navbar.active {
+        display: flex;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(33, 32, 32, 0.9);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
     }
 }

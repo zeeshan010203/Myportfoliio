@@ -16,8 +16,15 @@
   <body>
     <header class="header">
       <a href="#" class="logo">Portfolio</a>
-      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      <a class="square" href="javascript:void(0)" onclick="toggleMenu()">
+        <div class="burgerwrap">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </a>
       <nav class="navbar">
+        <span class="close-btn" onclick="toggleMenu()">✖</span> <!-- Close button -->
           <a href="#">Home</a>
           <a href="#about">About</a>
           <a href="#services">Skill</a>

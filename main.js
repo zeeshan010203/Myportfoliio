@@ -24,3 +24,6 @@ document.getElementById("toggleButton").onclick = function() {
         document.getElementById("toggleButton").textContent = "Switch to English";
     }
 };
+document.querySelector('.square').addEventListener('dblclick', function () {
+    document.querySelector('.navbar').classList.toggle('active');
+});
