@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <title>MyPortfolio</title>
+    <title>Zeeshan Bhatti</title>
   </head>
   <body>
     <header class="header">
@@ -24,7 +24,7 @@
         />
         <div class="dropdown-content">
           <a href="index.html">English</a>
-          <a href="contact.html">日本語</a>
+          <a href="japanese.html">日本語</a>
         </div>
       </div>
       <a href="#" class="logo">ポートフォリオ</a>
@@ -337,26 +337,23 @@
         </div>
       </div>
       <div class="contact-form">
-        <form action="includes/contact.php" method="POST">
+        <form id="contact-form">
           <input
+            id="name"
             name="name"
             type="text"
             placeholder="名前を入力してください"
             required
           />
           <input
+            id="email"
             name="email"
             type="email"
             placeholder="メールアドレスを入力してください"
             required
           />
-          <input
-            name="subject"
-            type="text"
-            placeholder="件名を入力してください"
-            required
-          />
           <textarea
+            id="message"
             name="message"
             cols="40"
             rows="5"
