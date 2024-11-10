@@ -9,6 +9,52 @@ body {
     color: azure;
     background-color: #1d1b1b;
 }
+.dropdown {
+    position: fixed;
+    top: 10px; 
+    left: 10px; 
+    z-index: 1000; 
+}
+
+
+.dropdown a img {
+    background-color: rgb(217, 185, 185); 
+    border-radius: 12px;
+    border: 3px solid #323237; 
+    padding: 5px; /* Optional: padding around the image for a more defined round shape */
+    color: rgb(44, 38, 38);
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(39, 39, 39);
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+.dropdown-content a {
+    color: white; /* Change text color to white */
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #0e0d0d;
+    border-radius: 20px;
+    color: rgb(245, 244, 244); /* Optionally, change the text color to black on hover */
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 .header {
     position: fixed;
@@ -875,8 +921,8 @@ body {
         opacity: 1;
     }
 }
-@media screen and (max-width: 768px) {
-    .navbar {
+    @media screen and (max-width: 768px) {
+        .navbar {
         display: none;
         flex-direction: column;
     }

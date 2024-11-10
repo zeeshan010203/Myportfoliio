@@ -15,16 +15,37 @@
   </head>
   <body>
     <header class="header">
+      <div class="dropdown">
+        <img
+          src="./image/translation.png"
+          width="50px"
+          height="40px"
+          alt="言語アイコン"
+        />
+        <div class="dropdown-content">
+          <a href="index.html">English</a>
+          <a href="contact.html">日本語</a>
+        </div>
+      </div>
       <a href="#" class="logo">ポートフォリオ</a>
-      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      <a class="square" href="javascript:void(0)" onclick="toggleMenu()">
+        <div class="burgerwrap">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
       <nav class="navbar">
+        <span class="close-btn" onclick="toggleMenu()">✖</span>
+        <!-- 閉じるボタン -->
         <a href="#">ホーム</a>
-        <a href="#about">自己紹介</a>
+        <a href="#about">概要</a>
         <a href="#services">スキル</a>
         <a href="#portfolio">ポートフォリオ</a>
         <a href="#contact">お問い合わせ</a>
       </nav>
     </header>
+
     <section class="home">
       <div class="home-content">
         <h3>こんにちは、私です</h3>
