@@ -68,7 +68,7 @@
     </section>
     <section class="about" id="about">
       <div class="about-img">
-        <img src="../my portfolio/image/zeeshan.logo.jpg" />
+        <img src="./image/zeeshan.logo.jpg" />
       </div>
       <div class="about-text">
         <h2>About<span>Me</span></h2>
@@ -285,12 +285,11 @@
           </div>
       </div>
       <div class="contact-form">
-          <form action="includes/contact.php" method="POST">
-              <input name="name" type="text" placeholder="Enter Your Name" required>
-              <input name="email" type="email" placeholder="Enter Your Email" required>
-              <input name="subject" type="text" placeholder="Enter Your Subject" required>
-              <textarea name="message" cols="40" rows="5" placeholder="Enter Your Message" required></textarea>
-              <input type="submit" value="Submit" class="send">
+          <form id="contact-form" onsubmit="">
+              <input id="name" name="name" type="text" placeholder="Enter Your Name" required>
+              <input id="email" name="email" type="email" placeholder="Enter Your Email" required>
+              <textarea id="message" name="message" cols="40" rows="5" placeholder="Enter Your Message" required></textarea>
+              <input  type="submit" value="Submit" class="send">
           </form>
       </div>
   </section>
