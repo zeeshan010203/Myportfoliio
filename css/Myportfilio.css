@@ -1,1055 +1,1044 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    color: azure;
-    background-color: #1d1b1b;
+  color: azure;
+  background-color: #1d1b1b;
 }
 .dropdown {
-    position: fixed;
-    top: 10px; 
-    left: 10px; 
-    z-index: 1000; 
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
 }
 
-
 .dropdown a img {
-    background-color: rgb(217, 185, 185); 
-    border-radius: 12px;
-    border: 3px solid #323237; 
-    padding: 5px; /* Optional: padding around the image for a more defined round shape */
-    color: rgb(44, 38, 38);
+  background-color: rgb(217, 185, 185);
+  border-radius: 12px;
+  border: 3px solid #323237;
+  padding: 5px; /* Optional: padding around the image for a more defined round shape */
+  color: rgb(44, 38, 38);
 }
 
 /* Dropdown menu */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgb(39, 39, 39);
-    min-width: 80px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    font-weight: 700;
-    border-radius: 20px;
+  display: none;
+  position: absolute;
+  background-color: rgb(39, 39, 39);
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-weight: 700;
+  border-radius: 20px;
 }
 
 .dropdown-content a {
-    color: white; /* Change text color to white */
-    padding: 8px 12px;
-    text-decoration: none;
-    display: block;
+  color: white; /* Change text color to white */
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #0e0d0d;
-    border-radius: 20px;
-    color: rgb(245, 244, 244); /* Optionally, change the text color to black on hover */
+  background-color: #0e0d0d;
+  border-radius: 20px;
+  color: rgb(
+    245,
+    244,
+    244
+  ); /* Optionally, change the text color to black on hover */
 }
 
 /* Show the dropdown on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
-
 .header {
-    position: fixed;
-    max-width: auto ;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background:rgb(33, 32, 32);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-
+  position: fixed;
+  max-width: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: rgb(33, 32, 32);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
 
 .logo {
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: default;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 0.5s;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.5s;
 }
 
 .navbar a {
-    display:inline-block;
-    font-size: 25px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: 35px;
-    transition: 0.3s;
-    opacity: 0;
-    animation: slideTop 0.5s ease forwards;
-    animation-delay: calc(0.1s * var(--i));
-    stroke-width: 6px;
-    fill: transparent;
-    stroke: rgb(217, 185, 185) ;
-    stroke-dasharray: 85 400;
-    stroke-dashoffset: -220;
-    transition: 1s all ease;
+  display: inline-block;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 35px;
+  transition: 0.3s;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.1s * var(--i));
+  stroke-width: 6px;
+  fill: transparent;
+  stroke: rgb(217, 185, 185);
+  stroke-dasharray: 85 400;
+  stroke-dashoffset: -220;
+  transition: 1s all ease;
 }
 
 .navbar a:hover {
-    color: rgb(217, 185, 185);
+  color: rgb(217, 185, 185);
 }
 .square {
-    border: 1px solid rgb(217, 185, 185);
-    height: 26px;
-    width: 26px;
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 10%;
-    transform: rotate(45deg);
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+  border: 1px solid rgb(217, 185, 185);
+  height: 26px;
+  width: 26px;
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 10%;
+  transform: rotate(45deg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995);
 }
 
 .square .burgerwrap {
-    height: 18px;
-    width: 21px;
-    transform: rotate(-45deg);
-    padding-left: 5px;
-    padding-top: 8px;
+  height: 18px;
+  width: 21px;
+  transform: rotate(-45deg);
+  padding-left: 5px;
+  padding-top: 8px;
 }
 
 .square:hover {
-    transform: rotate(135deg);
-    border: 1px solid #fff;
+  transform: rotate(135deg);
+  border: 1px solid #fff;
 }
 
 .square span {
-    height: 2px;
-    width: 14px;
-    background: rgb(217, 185, 185);
-    display: block;
-    margin-bottom: 2px;
-    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+  height: 2px;
+  width: 14px;
+  background: rgb(217, 185, 185);
+  display: block;
+  margin-bottom: 2px;
+  transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995);
 }
 
 .square:hover span {
-    margin-left: 26px;
+  margin-left: 26px;
 }
 .close-btn {
-    display: none; /* Hidden by default */
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    z-index: 1000; /* Ensure it appears above the menu items */
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it appears above the menu items */
 }
 
-
 .home {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url("./../image/shan.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 70px 10% 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("./../image/shan.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 70px 10% 0;
 }
 
 .home-content {
-    max-width: 730px;
+  max-width: 730px;
 }
 
 .home-content h3 {
-    font-size: 30px;
-    font-weight: 700;
-    opacity: 0;
-    animation: slideBottom 1s ease forwards;
-    animation-delay: 0.3s;
+  font-size: 30px;
+  font-weight: 700;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 0.3s;
 }
 
 .home-content h1 {
-    font-size: 56px;
-    font-weight: 700;
-    margin: -3px 0;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 0.4s;
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.4s;
 }
 
 .home-content p {
-    font-size: 20px;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 0.5s;
+  font-size: 20px;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 0.5s;
 }
 
 .home-sci a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid rgb(217, 185, 185);
-    border-radius: 50%;
-    font-size: 20px;
-    color: rgb(224, 224, 224);
-    text-decoration: none;
-    margin: 30px 15px 30px 0;
-    transition: 0.5s ease;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: calc(0.2s * var(--i));
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid rgb(217, 185, 185);
+  border-radius: 50%;
+  font-size: 20px;
+  color: rgb(224, 224, 224);
+  text-decoration: none;
+  margin: 30px 15px 30px 0;
+  transition: 0.5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 
 .home-sci a:hover {
-    background: rgb(217, 185, 185);
-    color: rgb(217, 185, 185);
-    box-shadow: 0 0 5px rgb(217, 185, 185);
+  background: rgb(217, 185, 185);
+  color: rgb(217, 185, 185);
+  box-shadow: 0 0 5px rgb(217, 185, 185);
 }
 
 .btn-box {
-    display: inline-block;
-    padding: 12px 28px;
-    background: rgb(217, 185, 185);
-    border-radius: 40px;
-    font-size: 16px;
-    color: #05090a;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    opacity: 0;
-    animation: slideBottom 1s ease forwards;
-    animation-delay: 1s;
+  display: inline-block;
+  padding: 12px 28px;
+  background: rgb(217, 185, 185);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #05090a;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 1s;
 }
 
 .btn-box:hover {
-    box-shadow: 0 0 5px rgb(217, 185, 185);
+  box-shadow: 0 0 5px rgb(217, 185, 185);
 }
 .home-content h3 span {
-    color: rgb(217, 185, 185);
+  color: rgb(217, 185, 185);
 }
 .about {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2rem;
-    padding: 70px 10%;
-    background-color: #1c1a1a;
-    color: white;
-    justify-content: center;
-    min-height: 100vh;
-  
-  }
-  
-  .about-img img {
-    max-width: 600px;
-    width: 60%;
-    height: auto;
-    border-radius: 100%;
-    box-shadow: 10px 4px 10px rgba(14, 14, 14, 0.4); 
-    transition: transform 0.3s ease;
-  }
-  
-  .about-text h2 {
-    font-size: 60px;
-  }
-  
-  .about-text h2 span {
-    color: rgb(217, 185, 185);
-    
-  }
-  
-  .about-text h4 {
-    font-size: 29px;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.7;
-    margin: 15px 0 30px;
-  }
-  
-  .about-text p {
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 100px;
-  }
-  #services {
-    color: white;
-    font-size: 20px;
-    line-height: 1.4;
-    margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+  padding: 70px 10%;
+  background-color: #1c1a1a;
+  color: white;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.about-img img {
+  max-width: 600px;
+  width: 60%;
+  height: auto;
+  border-radius: 100%;
+  box-shadow: 10px 4px 10px rgba(14, 14, 14, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.about-text h2 {
+  font-size: 60px;
+}
+
+.about-text h2 span {
+  color: rgb(217, 185, 185);
+}
+
+.about-text h4 {
+  font-size: 29px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.7;
+  margin: 15px 0 30px;
+}
+
+.about-text p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 100px;
+}
+#services {
+  color: white;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 10rem;
+  padding: 20px 0;
 }
 
 .sub-title {
-    text-align: center;
-    font-size: 60px;
-    padding-bottom: 70px;
-    font-weight: 700;
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 70px;
+  font-weight: 700;
 }
 
 .sub-title span {
-    color: rgb(217, 185, 185);
-}
-
-.container {
-    padding: 90px;
-
+  color: rgb(217, 185, 185);
 }
 
 .service-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin: 0 auto;
-    justify-items: center;
+  width: 95vw !important;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 60px;
 }
 
 .service-list div {
-    background: transparent;
-    padding: 40px;
-    max-width: 400px;
-    font-size: 13px;
-    font-weight: 400;
-    border-radius: 20px;
-    transition: background 0.5s, transform 0.5s;
-    box-shadow: 1px 1px 20px rgb(217, 185, 185),
-                1px 1px 40px rgb(221, 161, 161);
+  width: 95%;
+  max-width: 350px;
+  background: transparent;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: 20px;
+  transition: background 0.5s, transform 0.5s;
+  box-shadow: 1px 1px 20px rgb(217, 185, 185), 1px 1px 40px rgb(221, 161, 161);
 }
 
 .service-list div i {
-    font-size: 30px;
-    margin-bottom: 30px;
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 
 .service-list div h2 {
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 30px;
-    text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .service-list div a {
-    text-decoration: none;
-    color: black;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
 }
 .service-list div p {
-    display: inline-block;
-    overflow-wrap: break-word;
-    width: 100%;
-    max-width: 35ch; 
-    margin-bottom: 20px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  margin-bottom: 20px;
 }
 .read {
-    display: inline-block;
-    padding: 12px 28px;
-    background: rgb(217, 185, 185);
-    border-radius: 40px;
-    font-size: 16px;
-    color: rgb(221, 161, 161);
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    opacity: 0;
-    animation: slideBottom 1s ease forwards;
-    animation-delay: 1s;
+  display: inline-block;
+  padding: 12px 28px;
+  background: rgb(217, 185, 185);
+  border-radius: 40px;
+  font-size: 16px;
+  color: rgb(221, 161, 161);
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 1s;
 }
 
 .section {
-   display: flex;
+  display: flex;
+  width: 100%;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .container1 {
-    width: 600px;
-    min-height: 500px;
-    padding: 75px 90px;
- }
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
 
 .heading1 {
-    text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness: 5px;
-    margin-bottom: 50px;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-bottom: 50px;
 }
 .bar {
-     font-size: 23px;
-     margin: 20px 0;
+  font-size: 23px;
+  margin: 20px 0;
 }
 
 .Technical-bars .bar .info {
-     margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 .Technical-bars .bar .info span {
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
 }
 
 .Technical-bars .bar .progress-line {
-    position: relative;
-    border-radius: 10px;
-    width: 100%;
-    height: 5px;
-    background-color: black;
-    overflow: hidden;
-    margin-top: 5px;
-    transform-origin: left;
-     transform: scaleX(0);
-    animation: animateProgress 1s cubic-bezier(1, 0, 0.5, 1) forwards;
- }
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: black;
+  overflow: hidden;
+  margin-top: 5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: animateProgress 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
 
 .Technical-bars .bar .progress-line span {
-    display: block;
-    height: 100%;
-    border-radius: 10px;
-    background-color: rgb(217, 185, 185);
-    transform: scaleX(0);
-    animation: animateProgressFill 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-    transform-origin: left;
+  display: block;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgb(217, 185, 185);
+  transform: scaleX(0);
+  animation: animateProgressFill 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform-origin: left;
 }
 
 .progress-line.html span {
-    width: 80%;
+  width: 80%;
 }
 
 .progress-line.css span {
-    width: 80%;
+  width: 80%;
 }
 
 .progress-line.javascript span {
-    width: 50%;
+  width: 50%;
 }
 
 .progress-line.python span {
-     width: 50%;
+  width: 50%;
 }
 
 .progress-line.java span {
-    width: 40%;
+  width: 40%;
 }
 
 .progress-line.php span {
-    width: 60%;
+  width: 60%;
 }
 .progress-line span::after {
-    content: attr(data-percentage); 
-    position: absolute;
-    padding: 1px 8px;
-    background-color: #000000;
-    color: rgb(255, 253, 253);
-    border-radius: 3px;
-    top: -28px; 
-    right: -20px;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: 0; 
-        
+  content: attr(data-percentage);
+  position: absolute;
+  padding: 1px 8px;
+  background-color: #000000;
+  color: rgb(255, 253, 253);
+  border-radius: 3px;
+  top: -28px;
+  right: -20px;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
 }
- @keyframes showText {
-    100% {
-            opacity: 1;
-         }
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+.radial-section {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .radial-bar {
-    display: inline-block;
-    position: relative;
-    width: 150px;
-    height: 150px;
-    margin: 20px;
-    background-color: transparent; /* Make background transparent */
+  display: inline-block;
+  position: relative;
+  width: 45%;
+  max-width: 400px;
+  min-width: 200px;
+  margin: 30px 0;
+  background-color: transparent; /* Make background transparent */
 }
 
 .radial-bar svg {
-    width: 100%;
-    height: 100%;
-    transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
 }
 
 .progress-bar {
-    stroke-width: 10;
-    stroke: #000000;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
-    animation: animate-bar 1s linear forwards;
+  stroke-width: 10;
+  stroke: #000000;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
 }
 
 .path {
-    stroke-width: 10;
-    stroke: rgb(217, 185, 185);
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
+  stroke-width: 10;
+  stroke: rgb(217, 185, 185);
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
 }
 
 .path-1 {
-    animation: animate-path1 1s 1s linear forwards;
+  animation: animate-path1 1s 1s linear forwards;
 }
 
 .path-2 {
-    animation: animate-path2 1s 1s linear forwards;
+  animation: animate-path2 1s 1s linear forwards;
 }
 
 .path-3 {
-    animation: animate-path3 1s 1s linear forwards;
+  animation: animate-path3 1s 1s linear forwards;
 }
 
 .path-4 {
-    animation: animate-path4 1s 1s linear forwards;
+  animation: animate-path4 1s 1s linear forwards;
 }
 
 @keyframes animate-path1 {
-    100% {
-        stroke-dashoffset: 50;
-    }
+  100% {
+    stroke-dashoffset: 50;
+  }
 }
 
 @keyframes animate-path2 {
-    100% {
-        stroke-dashoffset: 175;
-    }
+  100% {
+    stroke-dashoffset: 175;
+  }
 }
 
 @keyframes animate-path3 {
-    100% {
-        stroke-dashoffset: 125;
-    }
+  100% {
+    stroke-dashoffset: 125;
+  }
 }
 
 @keyframes animate-path4 {
-    100% {
-        stroke-dashoffset: 250;
-    }
+  100% {
+    stroke-dashoffset: 250;
+  }
 }
 
 /* Center the percentage inside the circle */
 .radial-bar .percentage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    font-weight: 600;
-    color: rgb(246, 246, 246); /* Change color as needed */
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(246, 246, 246); /* Change color as needed */
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
 }
 
 /* Center the skill text below the circle */
 .radial-bar .text {
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    bottom: -20px;
-    transform: translateX(-50%);
-    font-size: 17px;
-    font-weight: 500;
-    color:rgb(217, 185, 185); /* Change color as needed */
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+  font-size: 17px;
+  font-weight: 500;
+  color: rgb(217, 185, 185); /* Change color as needed */
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
 }
 
 @keyframes showText {
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
-.main-text{
-    padding-top: 100px; 
-    margin-top: 100px;
-    padding-bottom: 4rem;
-    margin-bottom: 4rem;
+.main-text {
+  padding-top: 100px;
+  margin-top: 100px;
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
 }
-.main-text h2{
-    font-size: 60px;
-    line-height: 4;
-    text-align: center;
+.main-text h2 {
+  font-size: 60px;
+  line-height: 4;
+  text-align: center;
 }
 .main-text h2 span {
-    color: rgb(217, 185, 185);
+  color: rgb(217, 185, 185);
 }
-.portfolio-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Ensures responsive layout */
-    gap: 50px; /* Added a gap between images */
-    justify-content: space-between;
-    padding-right: 50px;
-    padding-left: 50px;
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(350px, 1fr)
+  ); /* Ensures responsive layout */
+  gap: 50px; /* Added a gap between images */
+  justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 50px;
 }
-.row{
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    cursor: pointer;
+.row {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
 }
-.row img{
-    width: 100%;
-    border-radius: 8px;
-    transition: transform 0.5s;
+.row img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.5s;
 }
-.layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgb(217, 185, 185), rgb(225, 205, 205)); /* Fixed gradient syntax */
-    position: absolute;
-    border-radius: 8px;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 40px;
-    transition: height 0.5s;
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(
+    rgb(217, 185, 185),
+    rgb(225, 205, 205)
+  ); /* Fixed gradient syntax */
+  position: absolute;
+  border-radius: 8px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 40px;
+  transition: height 0.5s;
 }
-.layer h5{
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 15px;
+.layer h5 {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 .layer p {
-    color: rgb(28, 24, 24);
-    font-size: 1rem;
-    line-height: 1.8;
+  color: rgb(28, 24, 24);
+  font-size: 1rem;
+  line-height: 1.8;
 }
-.layer i{
-    color: red;
-    margin-top: 20px;
-    font-size: 20px;
-    background: white;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Ensures the icon is centered */
-    border-radius: 50px;
+.layer i {
+  color: red;
+  margin-top: 20px;
+  font-size: 20px;
+  background: white;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Ensures the icon is centered */
+  border-radius: 50px;
 }
-.row:hover img{
-    transform: scale(1.1);
+.row:hover img {
+  transform: scale(1.1);
 }
-.row:hover .layer{
-    height: 100%; /* Fixed to 100% instead of 100 */
+.row:hover .layer {
+  height: 100%; /* Fixed to 100% instead of 100 */
 }
 .contact {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 3rem;
-    padding-left: 30px;
-    margin-top: 130px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3rem;
+  padding-left: 30px;
+  margin-top: 130px;
 }
 
 .contact-text h2 {
-    font-size: 90px;
-    line-height: 1;
-    text-align: center;
+  font-size: 50px;
+  line-height: 1;
+  text-align: center;
 }
 
 .contact-text span {
-    color: rgb(217, 185, 185);
+  color: rgb(217, 185, 185);
 }
 
 .contact-text h4 {
-    margin: 15px 0;
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
+  margin: 15px 0;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .contact-text p {
-    color: white;
-    font-size: 20px;
-    line-height: 1.5;
-    margin-bottom: 2rem;
+  color: white;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  width: 90%;
 }
 
 .contact-list {
-    margin-bottom: 3rem;
-    list-style: none;
-    padding: 0;
+  margin-bottom: 3rem;
+  list-style: none;
+  padding: 0;
 }
 
 .contact-list li {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .contact-list i {
-    color: rgb(217, 185, 185);
-    font-size: 20px;
-    font-weight: 600;
-    margin-right: 10px;
-    transition: all 0.4s ease;
+  color: rgb(217, 185, 185);
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 10px;
+  transition: all 0.4s ease;
 }
 
 .contact-list li a:hover {
-    transform: scale(1.01) translate(-5px);
-    color: rgb(217, 185, 185);
+  transform: scale(1.01) translate(-5px);
+  color: rgb(217, 185, 185);
 }
 
 .contact-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid rgb(217, 185, 185);
-    border-radius: 50%;
-    font-size: 20px;
-    color: rgb(235, 235, 235);
-    text-decoration: none;
-    margin: 30px 15px 30px 0;
-    transition: 0.5s ease;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: calc(0.2s * var(--i));
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid rgb(217, 185, 185);
+  border-radius: 50%;
+  font-size: 20px;
+  color: rgb(235, 235, 235);
+  text-decoration: none;
+  margin: 30px 15px 30px 0;
+  transition: 0.5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 
 .contact-icons a:hover {
-    background: rgb(217, 185, 185);
-    color: rgb(255, 255, 255);
-    box-shadow: 0 0 20px rgb(217, 185, 185);
+  background: rgb(217, 185, 185);
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgb(217, 185, 185);
 }
 
-.contact-form form input, .contact-form form textarea {
-    border: none;
-    outline: none;
-    width: 90%;
-    padding: 18px;
-    background: rgb(255, 254, 254);
-    color: #000000;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    border-radius: 0.5rem;
+.contact-form form input,
+.contact-form form textarea {
+  border: none;
+  outline: none;
+  width: 90%;
+  padding: 18px;
+  background: rgb(255, 254, 254);
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .contact-form .send {
-    display: inline-block;
-    padding: 12px 28px;
-    background: rgb(217, 185, 185);
-    border-radius: 40px;
-    font-size: 16px;
-    color: rgb(12, 11, 11);
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    opacity: 0;
-    animation: slideBottom 1s ease forwards;
-    animation-delay: 1s;
+  display: inline-block;
+  padding: 12px 28px;
+  background: rgb(217, 185, 185);
+  border-radius: 40px;
+  font-size: 16px;
+  color: rgb(12, 11, 11);
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 1s;
 }
 
 .contact-form form .send:hover {
-    box-shadow: 1px 1px 20px rgb(217, 185, 185),
-                1px 1px 40px rgb(221, 161, 161);
+  box-shadow: 1px 1px 20px rgb(217, 185, 185), 1px 1px 40px rgb(221, 161, 161);
 }
 
 .last-text p {
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background:  rgb(221, 161, 161);
-    font-weight: 500;
-    margin-top: 70px;
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: rgb(221, 161, 161);
+  font-weight: 500;
+  margin-top: 70px;
 }
 
 .top {
-    position: fixed;
-    bottom: 2rem;
-    right: 2.1rem;
-    cursor: pointer;
-    text-decoration: none; /* Removes underline */
+  position: fixed;
+  bottom: 2rem;
+  right: 2.1rem;
+  cursor: pointer;
+  text-decoration: none; /* Removes underline */
 }
 
 .top i {
-    color: rgb(221, 161, 161);
-    background: rgb(24, 23, 23);
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 0.5rem;
+  color: rgb(221, 161, 161);
+  background: rgb(24, 23, 23);
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 0.5rem;
 }
 
-
 @keyframes slideLeft {
-    from {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideBottom {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-
 @keyframes slideLeft {
-    from {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideBottom {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+@keyframes animateProgress {
+  100% {
+    transform: scaleX(1);
+  }
+}
 
+@keyframes animateProgressFill {
+  100% {
+    transform: scaleX(1);
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-    @keyframes animateProgress {
-        100% {
-            transform: scaleX(1);
-        }
-    }
-
-    @keyframes animateProgressFill {
-        100% {
-            transform: scaleX(1);
-        }
-    }
-
-    @keyframes showText {
-        100% {
-            opacity: 1;
-        }
-    }
-
-
-
-
-
-
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
 
 @keyframes slideRight {
-    0% {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideTop {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideBottom {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideLeft {
-    0% {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
-    @media screen and (max-width: 768px) {
-        .navbar {
-        display: none;
-        flex-direction: column;
-    }
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+  }
 
-    .navbar.active {
-        display: flex;
-    }   
+  .navbar.active {
+    display: flex;
+  }
 
-    .hamburger {
-        display: block;
-    }
-}@media (max-width: 600px) {
-    .header {
-        flex-direction: column;
-        padding: 15px;
-    }
-    
-    .navbar a {
-        font-size: 20px;
-        margin-left: 20px;
-    }
-    
-    .home-content h1 {
-        font-size: 32px;
-    }
-    
-    .about {
-        grid-template-columns: 1fr;
-    }
-    
-    .service-list {
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
-    
-    .contact {
-        grid-template-columns: 1fr;
-    }
+  .hamburger {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .navbar a {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .navbar {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 10%;
-        background: black   ;
-        padding: 10px;
-        border-radius: 8px;
-    }
-    .header.active {
-        display: none; /* Hide the entire header when navbar is active */
-    }
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    background: black;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .header.active {
+    display: none; /* Hide the entire header when navbar is active */
+  }
 
-    .navbar.active {
-        display: flex;
-        width: 100%;
-        position: fixed; /* Make the active navbar fixed to the top */
-        top: 0;
-        left: 0;
-        background: rgba(33, 32, 32, 0.9); /* Slightly transparent background */
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 999; /* Ensure it's on top */
-    }
+  .navbar.active {
+    display: flex;
+    width: 100%;
+    position: fixed; /* Make the active navbar fixed to the top */
+    top: 0;
+    left: 0;
+    background: rgba(33, 32, 32, 0.9); /* Slightly transparent background */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999; /* Ensure it's on top */
+  }
 
-    .navbar.active a {
-        font-size: 24px;
-        padding: 15px 0;
-    }
+  .navbar.active a {
+    font-size: 24px;
+    padding: 15px 0;
+  }
 
-    
-    .about-img img {
-        width: 80%;
-    }
-    
-    .service-list {
-        grid-template-columns: 1fr;
-    }
-    
-    .portfolio-content {
-        grid-template-columns: 1fr;
-    }
+  .about-img img {
+    width: 80%;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    .navbar {
-        display: flex;
-    }
+  .navbar {
+    display: flex;
+  }
 
-    .hamburger {
-        display: none;
-    }
+  .hamburger {
+    display: none;
+  }
 }
 @media screen and (min-width: 765px) {
-    .square {
-        display: none; /* Hide hamburger icon */
-    }
+  .square {
+    display: none; /* Hide hamburger icon */
+  }
 
-    .navbar {
-        display: flex; /* Ensure navbar is always displayed on larger screens */
-        position: relative; /* Reset position to fit within header */
-        width: auto; /* Default width for desktop view */
-        flex-direction: row; /* Horizontal layout */
-        background: none; /* Remove background for desktop view */
-        padding: 0;
-    }
-   
+  .navbar {
+    display: flex; /* Ensure navbar is always displayed on larger screens */
+    position: relative; /* Reset position to fit within header */
+    width: auto; /* Default width for desktop view */
+    flex-direction: row; /* Horizontal layout */
+    background: none; /* Remove background for desktop view */
+    padding: 0;
+  }
 }
 @media screen and (max-width: 768px) {
-    .navbar.active .close-btn {
-        display: block; /* Show close button when navbar is active */
-    }
+  .navbar.active .close-btn {
+    display: block; /* Show close button when navbar is active */
+  }
 
-    .navbar.active {
-        display: flex;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: rgba(33, 32, 32, 0.9);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 999;
-    }
+  .navbar.active {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(33, 32, 32, 0.9);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
 }
