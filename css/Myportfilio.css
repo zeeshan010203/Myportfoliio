@@ -7,11 +7,32 @@
 }
 
 .row a {
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 30px !important;
+  }
+
+  .row .layer {
+    padding: 0;
+    margin: 0;
+  }
+
+  .row .layer h5 {
+    display: hidden;
+  }
+
+  .row a {
+    font-size: 10px;
+  }
+}
+
 .row a:visited {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 body {
